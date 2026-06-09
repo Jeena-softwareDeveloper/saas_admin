@@ -22,8 +22,8 @@ import api from '@/lib/api'
 
 function LoginPage() {
   const { login } = useAuthStore();
-  const [email, setEmail] = useState("jeena2284@gmail.com");
-  const [password, setPassword] = useState("jeena.123");
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
