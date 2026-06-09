@@ -32,7 +32,7 @@ function LoginPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await api.post("/auth/admin/login", { email, password });
+      const res = await api.post("/auth/admin/login", { identifier: email, password });
       const { user, accessToken, refreshToken } = res.data.data;
       login(user, accessToken, refreshToken);
       window.location.href = "/admin";
